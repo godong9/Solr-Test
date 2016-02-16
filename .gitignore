@@ -1,0 +1,9 @@
+*.pid
+
+.idea
+
+bin/
+
+logs/
+
+solr-5.4.1/exmple/cloud

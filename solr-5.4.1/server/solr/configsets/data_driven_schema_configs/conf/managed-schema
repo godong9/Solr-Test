@@ -1022,6 +1022,15 @@
       </analyzer>
     </fieldType>
 
+    <!-- Korean -->
+    <dynamicField name="*_txt_ko" type="text_ko" indexed="true" stored="true"/>
+    
+    <fieldType name="text_ko" class="solr.TextField" positionIncrementGap="100">
+      <analyzer> 
+        <tokenizer class="org.bitbucket.eunjeon.mecab_ko_lucene_analyzer.StandardTokenizerFactory" compoundNounMinLength="3"/>
+      </analyzer>
+    </fieldType>
+
   <!-- Similarity is the scoring routine for each document vs. a query.
        A custom Similarity or SimilarityFactory may be specified here, but 
        the default is fine for most applications.  
