@@ -904,6 +904,9 @@
     </arr>
   </requestHandler>
 
+  <requestHandler name="/admin/" class="org.apache.solr.handler.admin.AdminHandlers" />
+
+  <requestHandler name="/admin/luke" class="org.apache.solr.handler.admin.LukeRequestHandler" />
 
   <!--
 
