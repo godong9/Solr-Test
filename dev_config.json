@@ -1,0 +1,19 @@
+{
+  "mainAddress":"localhost:27017",
+  "namespaces":{
+    "include":["deployd.notes"]
+  },
+  "docManagers":[
+    {
+      "docManager":"solr_notes_doc_manager",
+      "targetURL":"http://localhost:8983/solr/notes",
+      "autoCommitInterval":0
+    }
+  ],
+  "oplogFile":"oplog_ts/oplog.timestamp",
+  "logging":{
+    "filename":"logs/mongo-connector.log"
+  },
+  "batchSize":1000,
+  "verbosity":3
+}
