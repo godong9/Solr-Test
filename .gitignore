@@ -7,3 +7,8 @@ bin/
 logs/
 
 solr-5.4.1/exmple/cloud
+
+log.*
+
+solr-5.4.1/example/cloud/node1
+solr-5.4.1/example/cloud/node2
