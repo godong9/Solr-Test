@@ -344,7 +344,7 @@
     <autoCommit>
       <maxDocs>100</maxDocs>
       <maxTime>${solr.autoCommit.maxTime:15000}</maxTime>
-      <openSearcher>false</openSearcher>
+      <openSearcher>true</openSearcher>
     </autoCommit>
 
     <!-- softAutoCommit is like autoCommit except it causes a
@@ -354,7 +354,7 @@
       -->
 
     <autoSoftCommit>
-      <maxTime>1000</maxTime>
+      <maxTime>100</maxTime>
     </autoSoftCommit>
 
     <!-- Update Related Event Listeners
