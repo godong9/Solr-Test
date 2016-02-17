@@ -16,3 +16,6 @@ solr-5.4.1/example/cloud/node2
 solr-5.4.1/server/solr/notes/data
 
 oplog.timestamp
+
+dump_backup/
+dump/
