@@ -9,7 +9,7 @@ pkill mongo-connector
 
 #mongo drop_notes.js
 
-rm -rf ./solr-5.4.1/server/solr/notes/data
+#rm -rf ./solr-5.4.1/server/solr/notes/data
 
 ./start_solr.sh
 
