@@ -126,7 +126,7 @@
     <field name="cc" type="string" indexed="true" stored="true"/>
     <field name="address" type="string" indexed="true" stored="true"/>
     <field name="locWrote" type="location_rpt" indexed="true" stored="true" multiValued="true"/>
-    <field name="content" type="text_ko" indexed="true" stored="true" multiValued="false"/>
+    <field name="content" type="text_ko" indexed="true" stored="true" multiValued="false" termVectors="true"/>
     <field name="author" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="language" type="string" indexed="true" stored="true" multiValued="false"/>
     <field name="wroteAtPlan" type="string" indexed="true" stored="true" multiValued="false"/>
