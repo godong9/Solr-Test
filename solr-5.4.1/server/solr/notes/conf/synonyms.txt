@@ -26,4 +26,4 @@ Television, Televisions, TV, TVs
 
 # Synonym mappings can be used for spelling correction too
 pixima => pixma
-
+에펠탑 => 애펠탑 에팰탑 애팰탑

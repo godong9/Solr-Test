@@ -1049,7 +1049,7 @@
       <str name="mlt.fl">title,content</str>
     </lst>
   </requestHandler>
-  
+
   <!-- Spell Check
 
        The spell check component can return a list of alternative spelling
