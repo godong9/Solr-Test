@@ -10,9 +10,4 @@ pkill mongo-connector
 
 sleep 5;
 
-rm oplog_ts/oplog.timestamp
-rm logs/mongo-connector.log
-
-sleep 3;
-
 ./dev_start_mongo_connector.sh
