@@ -1042,6 +1042,14 @@
        
      -->
 
+  <searchComponent name="mlt" class="solr.MoreLikeThisComponent" />
+
+  <requestHandler name="/mlt" class="solr.SearchHandler" startup="lazy">
+    <lst name="defaults">
+      <str name="mlt.fl">title,content</str>
+    </lst>
+  </requestHandler>
+  
   <!-- Spell Check
 
        The spell check component can return a list of alternative spelling
