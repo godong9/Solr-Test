@@ -1047,6 +1047,7 @@
     <fieldType name="text_ko" class="solr.TextField" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="org.bitbucket.eunjeon.mecab_ko_lucene_analyzer.StandardTokenizerFactory" compoundNounMinLength="3"/>
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" />
       </analyzer>
     </fieldType>
 
