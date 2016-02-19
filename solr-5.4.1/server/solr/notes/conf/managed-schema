@@ -1060,10 +1060,13 @@
     </fieldType>
 
   <fieldType name="text_prefix_ngram" stored="false" indexed="true" class="solr.TextField">
-       <analyzer>
+       <analyzer type="index">
           <tokenizer class="solr.LowerCaseTokenizerFactory"/>
           <filter class="solr.EdgeNGramFilterFactory" minGramSize="2" maxGramSize="5"/>
        </analyzer>
+       <analyzer type="query">
+         <tokenizer class="solr.LowerCaseTokenizerFactory"/>
+      </analyzer>
   </fieldType>
 
     <fieldType name="text_ngram" stored="false" indexed="true" class="solr.TextField">
