@@ -123,6 +123,7 @@
     <field name="tags" type="text_ko" indexed="true" stored="true" multiValued="true"/>
     <field name="tags_autocomplete" type="text_ko_lowercase" indexed="true" stored="true" multiValued="true"/>
     <field name="tags_prefix" type="text_prefix_ngram" indexed="true" stored="false" multiValued="true"/>
+    <field name="tags_ngram" type="text_ngram" indexed="true" stored="false" multiValued="true"/>
     <field name="loc" type="location_rpt" indexed="true" stored="true" multiValued="true"/>
     <field name="cc" type="string" indexed="true" stored="true"/>
     <field name="address" type="string" indexed="true" stored="true"/>
@@ -143,6 +144,7 @@
 
     <copyField source="tags" dest="tags_autocomplete"/>
     <copyField source="tags" dest="tags_prefix"/>
+    <copyField source="tags" dest="tags_ngram"/>
 
     <!-- Dynamic field definitions allow using convention over configuration
        for fields via the specification of patterns to match field names.
@@ -1063,6 +1065,13 @@
           <filter class="solr.EdgeNGramFilterFactory" minGramSize="2" maxGramSize="5"/>
        </analyzer>
   </fieldType>
+
+    <fieldType name="text_ngram" stored="false" indexed="true" class="solr.TextField">
+         <analyzer>
+            <tokenizer class="solr.LowerCaseTokenizerFactory"/>
+            <filter class="solr.NGramFilterFactory" minGramSize="2" maxGramSize="5"/>
+         </analyzer>
+    </fieldType>
 
   <!-- Korean lowercase -->
   <fieldType name="text_ko_lowercase" class="solr.TextField" positionIncrementGap="100">
