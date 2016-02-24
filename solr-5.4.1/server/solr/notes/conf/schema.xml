@@ -1050,7 +1050,6 @@
     <fieldType name="text_ko" class="solr.TextField" positionIncrementGap="100">
         <analyzer type="index">
             <tokenizer class="org.bitbucket.eunjeon.mecab_ko_lucene_analyzer.StandardTokenizerFactory" compoundNounMinLength="3"/>
-            <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="false" />
         </analyzer>
         <analyzer type="query">
             <tokenizer class="org.bitbucket.eunjeon.mecab_ko_lucene_analyzer.StandardTokenizerFactory" compoundNounMinLength="3"/>
